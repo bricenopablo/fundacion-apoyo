@@ -183,9 +183,10 @@ main .patient__card {
   color: white;
   border-radius: 1rem;
   z-index: 99;
-  transition: top 300ms;
+  transition: all 300ms;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
   padding-right: 5rem;
+  cursor: pointer;
 }
 
 .alert::after {
@@ -196,7 +197,6 @@ main .patient__card {
   top: 50%;
   font-size: 1.3rem;
   transform: translateY(-50%);
-  cursor: pointer;
 }
 
 .alert.alert--danger,
@@ -272,7 +272,7 @@ main .patient__card {
 }
 
 .buttons button:last-child {
-  background: rgb(63, 221, 63);
+  background: crimson;
 }
 
 .new-btn {
@@ -334,6 +334,18 @@ main .patient__card {
 .form__field {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.phone-number {
+  position: absolute;
+  top: 32px;
+  color: black;
+  left: 10px;
+}
+
+.phone-number + input {
+  padding-left: 50px;
 }
 
 .patient__card form button {
