@@ -169,6 +169,42 @@ main .patient__card {
   padding: 3%;
 }
 
+.alert {
+  padding: 1rem;
+  position: absolute;
+  top: -100%;
+  margin-top: 1rem;
+  color: white;
+  border-radius: 1rem;
+  z-index: 99;
+  transition: top 300ms;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+  padding-right: 5rem;
+}
+
+.alert::after {
+  content: "✕";
+  color: white;
+  position: absolute;
+  right: 1.4rem;
+  top: 50%;
+  font-size: 1.3rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.alert.alert--danger,
+.alert.alert--success {
+  top: 0;
+}
+
+.alert.alert--danger {
+  background-color: rgba(224, 50, 85, 0.699);
+}
+.alert.alert--success {
+  background-color: rgb(121, 189, 11);
+}
+
 .columns,
 .patient {
   display: flex;
