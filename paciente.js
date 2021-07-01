@@ -1,8 +1,4 @@
 const PATIENTS = document.querySelector(".patients");
-const MESSAGE = document.querySelector("#message");
-const ADD_BTN = document.querySelector(".new-btn");
-const CLOSE_BTN = document.querySelector(".patient__card form svg");
-const PATIENT_FORM = document.querySelector("#form-paciente");
 
 const pacientes = JSON.parse(localStorage.getItem("pacientes"));
 
@@ -52,14 +48,6 @@ if (!pacientes.length) {
   localStorage.setItem("pacientes", "[]");
 }
 
-ADD_BTN.addEventListener("click", () => {
-  PATIENT_FORM.classList.add("opened");
-  PATIENT_FORM[0].focus();
-});
-
-CLOSE_BTN.addEventListener("click", () => {
-  PATIENT_FORM.classList.remove("opened");
-});
 
 PATIENT_FORM.addEventListener("submit", (e) => {
   e.preventDefault();
