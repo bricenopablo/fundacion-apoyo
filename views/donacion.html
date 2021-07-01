@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="/app-icon.ico" type="image/x-icon">
-    <title>Farmacia | Fundación Apoyo</title>
+    <title>Donación | Fundación Apoyo</title>
 </head>
 
 <body>
-    <nav style="background-color: rgb(103, 206, 43);">
-        <div class="control" style="background-color: rgb(103, 206, 43);">
+    <nav style="background-color: rgb(159, 52, 221);">
+        <div class="control" style="background-color: rgb(159, 52, 221);">
             <img src="../img/icons/arrow.svg" alt="">
         </div>
         <div class="user-avatar">
-            <img src="../img/bodeguero-avatar.png" alt="">
+            <img src="../img/colaboradora-avatar.png" alt="">
             <div class="details">
-                <h3>Elver Galarga</h3>
-                <span>Bodeguero</span>
+                <h3>Elba Surita</h3>
+                <span>Colaboradora</span>
             </div>
         </div>
         <div class="links">
@@ -49,37 +49,49 @@
         <div class="patient__card">
             <div class="columns">
                 <p>Código</p>
-                <p>Nombre</p>
-                <p>Cantidad</p>
-                <p>Bioequivalente</p>
+                <p>Valor</p>
+                <p>Fecha</p>
             </div>
             <div class="patients"></div>
             <img title="Agregar paciente" class="new-btn" src="../img/icons/add.svg" alt="" />
             <form id="form-paciente">
-                <h1>Nuevo insumo</h1>
+                <h1>Nueva donación</h1>
                 <div class="fields-group">
                     <div class="form__field">
                         <label>Nombre:</label>
                         <input type="text" placeholder="Nombre completo" required minlength="3" maxlength="60" />
                     </div>
                     <div class="form__field">
-                        <label>Código</label>
-                        <input type="text" required />
+                        <label>Rut</label>
+                        <input type="text" required minlength="11" maxlength="12" />
                     </div>
                     <div class="form__field">
-                        <label>Fecha de vencimiento:</label>
-                        <input type="date" required />
+                        <label>Nro de cuenta:</label>
+                        <input type="text">
                     </div>
                     <div class="form__field">
-                        <label>Bioequivalente:</label>
+                        <label>Banco:</label>
                         <select required>
-                            <option value="si">Sí</option>
-                            <option value="no">No</option>
+                            <option value="banco-estado">Banco Estado</option>
+                            <option value="santander">Santander</option>
+                            <option value="banco-de-chile">Banco de Chile</option>
                         </select>
                     </div>
                     <div class="form__field">
-                        <label>Ingredientes:</label>
-                        <textarea maxlength="100" required></textarea>
+                        <label>Tipo de cuenta:</label>
+                        <select required>
+                            <option value="corriente">Cuenta corriente</option>
+                            <option value="vista">Vista</option>
+                            <option value="credito">Credito</option>
+                        </select>
+                    </div>
+                    <div class="form__field">
+                        <label>Email:</label>
+                        <input type="email" />
+                    </div>
+                    <div class="form__field">
+                        <label>Valor:</label>
+                        <input type="text" />
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
