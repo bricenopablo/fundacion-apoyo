@@ -45,7 +45,7 @@ textarea {
   padding-left: 0.5rem;
   outline: none;
   padding: 0.5rem;
-  height: 150px;
+  height: 100px;
 }
 
 nav {
@@ -63,10 +63,14 @@ nav {
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 5;
 }
+.nav--green{
+  background-color: rgb(18, 236, 83);
+}
 
 nav.active {
   transform: translateX(0);
 }
+
 
 .user-avatar,
 .logo {
@@ -146,6 +150,11 @@ nav.active {
   transition: all 300ms ease-out;
 }
 
+.control--green{
+  background-color: rgb(18, 236, 83);
+}
+
+
 nav.active .control img {
   transform: rotateZ(180deg);
 }
@@ -174,7 +183,6 @@ main .patient__card {
   overflow-y: scroll;
   height: 90%;
 }
-
 .alert {
   padding: 1rem;
   position: absolute;
@@ -348,6 +356,7 @@ main .patient__card {
   padding-left: 50px;
 }
 
+
 .patient__card form button {
   margin: 0 auto;
   border: none;
@@ -369,6 +378,12 @@ main .patient__card {
   transform: translateX(-50%);
   border: 2px solid #fff;
   transition: all 300ms ease;
+}
+.add-btn.add-btn--green:hover{
+  background-color: rgb(18, 236, 83);
+}
+.add-btn.add-btn--green{
+  color: rgb(18, 236, 83);
 }
 
 .add-btn:hover {
