@@ -1,117 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="/app-icon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/app-icon.ico" type="image/x-icon" />
     <title>Donación | Fundación Apoyo</title>
-</head>
+  </head>
 
-<body>
-    <nav style="background-color: rgb(159, 52, 221);">
-        <div class="control" style="background-color: rgb(159, 52, 221);">
-            <img src="../img/icons/arrow.svg" alt="">
+  <body>
+    <nav style="background-color: rgb(159, 52, 221)">
+      <div class="control" style="background-color: rgb(159, 52, 221)">
+        <img src="../img/icons/arrow.svg" alt="" />
+      </div>
+      <div class="user-avatar">
+        <img src="../img/colaboradora-avatar.png" alt="" />
+        <div class="details">
+          <h3>Elba Surita</h3>
+          <span>Colaboradora</span>
         </div>
-        <div class="user-avatar">
-            <img src="../img/colaboradora-avatar.png" alt="">
-            <div class="details">
-                <h3>Elba Surita</h3>
-                <span>Colaboradora</span>
-            </div>
-        </div>
-        <div class="links">
-            <ul>
-                <li><a title="Pacientes" href="../index.html">Pacientes<img src="../img/icons/patient.svg" alt=""></a>
-
-                </li>
-                <li><a title="Farmacia" href="../views/farmacia.html">Farmacia<img src="../img/icons/drugstore.svg"
-                            alt=""></a>
-                </li>
-                <li><a title="Donación" href="../views/donacion.html">Donación<img
-                            src="../img/icons/online-donation.svg" alt=""></a>
-                </li>
-            </ul>
-        </div>
-        <div class="logo">
-            <img src="../img/icons/app-icon.svg" alt="">
-            <h4>Fundación Apoyo</h4>
-        </div>
+      </div>
+      <div class="links">
+        <ul>
+          <li>
+            <a title="Pacientes" href="../index.html"
+              >Pacientes<img src="../img/icons/patient.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a title="Farmacia" href="../views/farmacia.html"
+              >Farmacia<img src="../img/icons/drugstore.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a title="Donación" href="../views/donacion.html"
+              >Donación<img src="../img/icons/online-donation.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="../img/icons/app-icon.svg" alt="" />
+        <h4>Fundación Apoyo</h4>
+      </div>
     </nav>
     <main>
-        <div id="message" class="alert"></div>
-        <div class="patient__card">
-            <div class="columns">
-                <p>Código</p>
-                <p>Valor</p>
-                <p>Fecha</p>
-            </div>
-            <div class="patients"></div>
-            <img title="Agregar paciente" class="new-btn" src="../img/icons/add.svg" alt="" />
-            <form id="form-paciente">
-                <h1>Nueva donación</h1>
-                <div class="fields-group">
-                    <div class="form__field">
-                        <label>Nombre:</label>
-                        <input type="text" placeholder="Nombre completo" required minlength="3" maxlength="60" />
-                    </div>
-                    <div class="form__field">
-                        <label>Rut</label>
-                        <input type="text" required minlength="11" maxlength="12" />
-                    </div>
-                    <div class="form__field">
-                        <label>Nro de cuenta:</label>
-                        <input type="text">
-                    </div>
-                    <div class="form__field">
-                        <label>Banco:</label>
-                        <select required>
-                            <option value="banco-estado">Banco Estado</option>
-                            <option value="santander">Santander</option>
-                            <option value="banco-de-chile">Banco de Chile</option>
-                        </select>
-                    </div>
-                    <div class="form__field">
-                        <label>Tipo de cuenta:</label>
-                        <select required>
-                            <option value="corriente">Cuenta corriente</option>
-                            <option value="vista">Vista</option>
-                            <option value="credito">Credito</option>
-                        </select>
-                    </div>
-                    <div class="form__field">
-                        <label>Email:</label>
-                        <input type="email" />
-                    </div>
-                    <div class="form__field">
-                        <label>Valor:</label>
-                        <input type="text" />
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
-                    focusable="false" width="3em" height="3em" style="
-                  -ms-transform: rotate(360deg);
-                  -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
-                " preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
-                    <path
-                        d="M685.4 354.8c0-4.4-3.6-8-8-8l-66 .3L512 465.6l-99.3-118.4l-66.1-.3c-4.4 0-8 3.5-8 8c0 1.9.7 3.7 1.9 5.2l130.1 155L340.5 670a8.32 8.32 0 0 0-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3L512 564.4l99.3 118.4l66 .3c4.4 0 8-3.5 8-8c0-1.9-.7-3.7-1.9-5.2L553.5 515l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z"
-                        fill="#fff" />
-                    <path
-                        d="M512 65C264.6 65 64 265.6 64 513s200.6 448 448 448s448-200.6 448-448S759.4 65 512 65zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372z"
-                        fill="#fff" />
-                </svg>
-                <button class="add-btn">Guardar</button>
-            </form>
+      <div id="message" class="alert"></div>
+      <div class="patient__card">
+        <div class="columns">
+          <p>Código</p>
+          <p>Banco</p>
+          <p>Tipo de cuenta</p>
+          <p>Valor</p>
+          <p>Fecha</p>
         </div>
+        <div class="patients"></div>
+        <img
+          title="Agregar paciente"
+          class="new-btn"
+          src="../img/icons/add.svg"
+          alt=""
+        />
+        <form id="form-paciente">
+          <h1>Nueva donación</h1>
+          <div class="fields-group">
+            <div class="form__field">
+              <label>Nombre:</label>
+              <input
+                type="text"
+                placeholder="Nombre completo"
+                required
+                minlength="3"
+                maxlength="60"
+                value="Elba Surita"
+                disabled
+              />
+            </div>
+            <div class="form__field">
+              <label>Rut</label>
+              <input
+                type="text"
+                required
+                minlength="11"
+                maxlength="12"
+                placeholder="XX.XXX.XXX-X"
+              />
+            </div>
+            <div class="form__field">
+              <label>Nro de cuenta:</label>
+              <input type="text" />
+            </div>
+            <div class="form__field">
+              <label>Banco:</label>
+              <select required>
+                <option value="Banco Estado">Banco Estado</option>
+                <option value="Santander">Santander</option>
+                <option value="Banco de Chile">Banco de Chile</option>
+                <option value="Banco BCI">Banco BCI</option>
+                <option value="Banco Fallabela">Banco Fallabela</option>
+                <option value="Scotiabank">Scotiabank</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label>Tipo de cuenta:</label>
+              <select required>
+                <option value="Corriente">Cuenta corriente</option>
+                <option value="Vista">Vista</option>
+                <option value="Credito">Credito</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label>Email:</label>
+              <input type="email" />
+            </div>
+            <div class="form__field">
+              <label>Valor:</label>
+              <span class="text-input">$</span>
+              <input type="text" style="padding-left: 25px" />
+            </div>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            focusable="false"
+            width="3em"
+            height="3em"
+            style="
+              -ms-transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+            "
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 1024 1024"
+          >
+            <path
+              d="M685.4 354.8c0-4.4-3.6-8-8-8l-66 .3L512 465.6l-99.3-118.4l-66.1-.3c-4.4 0-8 3.5-8 8c0 1.9.7 3.7 1.9 5.2l130.1 155L340.5 670a8.32 8.32 0 0 0-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3L512 564.4l99.3 118.4l66 .3c4.4 0 8-3.5 8-8c0-1.9-.7-3.7-1.9-5.2L553.5 515l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z"
+              fill="#fff"
+            />
+            <path
+              d="M512 65C264.6 65 64 265.6 64 513s200.6 448 448 448s448-200.6 448-448S759.4 65 512 65zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372z"
+              fill="#fff"
+            />
+          </svg>
+          <button class="add-btn">Guardar</button>
+        </form>
+      </div>
     </main>
     <script src="../app.js"></script>
-</body>
-
+    <script src="../donar.js"></script>
+  </body>
 </html>

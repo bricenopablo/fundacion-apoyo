@@ -2,6 +2,10 @@ const PATIENTS = document.querySelector(".patients");
 
 const pacientes = JSON.parse(localStorage.getItem("pacientes"));
 
+if (!localStorage.getItem("pacientes") || typeof pacientes !== "object") {
+  localStorage.setItem("pacientes", "[]");
+}
+
 const calcularEdad = (fechaNacimiento) => {
   const edad =
     new Date().getFullYear() - new Date(fechaNacimiento).getFullYear();
@@ -41,14 +45,6 @@ function showPatients() {
   });
 }
 
-if (!localStorage.getItem("pacientes")) {
-  localStorage.setItem("pacientes", "[]");
-}
-if (!pacientes.length) {
-  localStorage.setItem("pacientes", "[]");
-}
-
-
 PATIENT_FORM.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -65,7 +61,7 @@ PATIENT_FORM.addEventListener("submit", (e) => {
 
   if (patients.find((patient) => patient.rut === rut)) {
     MESSAGE.innerHTML = `El paciente ${nombre} ya ha sido registrado con anterioridad.`;
-    setTimeout(() => MESSAGE.classList.toggle("alert--danger"), 5000);
+    setTimeout(() => MESSAGE.classList.toggle("alert--danger"), 2000);
     rut.value = "";
     rut.focus();
   } else {
