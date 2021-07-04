@@ -18,7 +18,7 @@ const showIns = () => {
 
   if (insumos) {
     insumos.forEach((insumo) => {
-      ins.innerHTML = `
+      ins.innerHTML += `
         <div class="patient">
           <p>${insumo.codigo}</p>
           <p>${insumo.nombre}</p>

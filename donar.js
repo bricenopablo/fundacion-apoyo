@@ -10,7 +10,7 @@ const showDonations = () => {
 
   if (donaciones) {
     donaciones.forEach((donation) => {
-      donations.innerHTML = `
+      donations.innerHTML += `
         <div class="patient">
           <p>${donation.codigo}</p>
           <p>${donation.banco}</p>
