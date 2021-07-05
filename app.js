@@ -15,4 +15,8 @@ ADD_BTN.addEventListener("click", () => {
 
 CLOSE_BTN.addEventListener("click", () => {
   PATIENT_FORM.classList.remove("opened");
+
+  for (let i = 0; i < PATIENT_FORM.length - 1; i++) {
+    PATIENT_FORM[i].value = "";
+  }
 });

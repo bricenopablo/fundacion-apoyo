@@ -37,13 +37,49 @@ function showPatients() {
         <p>${paciente.rut}</p>
         <p>${edad}</p>
         <div class="buttons">
-            <button>Editar</button>
+            <button onclick="editPatient('${paciente.rut}')">Editar</button>
             <button onclick="deletePatient('${paciente.rut}')">Borrar</button>
         </div>
       </div>
     `;
   });
 }
+
+const editPatient = (rut) => {
+  const paciente = pacientes.find((pac) => pac.rut === rut);
+
+  const FIELDS_GROUP = PATIENT_FORM.children[1];
+  FIELDS_GROUP.innerHTML += `
+    <div class="form__field">
+      <label>Observaciones:</label>
+      <textarea placeholder="Ingrese sus observaciones..." maxlength="100" required="" value="${paciente.observaciones}"></textarea>
+    </div>
+  `;
+
+  const nombre = PATIENT_FORM[0];
+  const rutf = PATIENT_FORM[1];
+  const fecha_nacimiento = PATIENT_FORM[2];
+  const estado_civil = PATIENT_FORM[3];
+  const nro_emergencia = PATIENT_FORM[4];
+  const plan_salud = PATIENT_FORM[5];
+  const afp = PATIENT_FORM[6];
+  const enfermedades = PATIENT_FORM[7];
+
+  nombre.value = paciente.nombre;
+  rutf.value = paciente.rut;
+  fecha_nacimiento.value = paciente.fecha_nacimiento;
+  estado_civil.value = paciente.estado_civil;
+  nro_emergencia.value = paciente.nro_emergencia.replace("+56", "");
+  plan_salud.value = paciente.plan_salud;
+  afp.value = paciente.afp;
+  enfermedades.value = paciente.enfermedades;
+
+  PATIENT_FORM.classList.add("opened");
+
+  console.log(nombre.value);
+
+  const observaciones = PATIENT_FORM[8];
+};
 
 PATIENT_FORM.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -74,6 +110,7 @@ PATIENT_FORM.addEventListener("submit", (e) => {
       plan_salud: plan_salud.value,
       afp: afp.value,
       enfermedades: enfermedades.value,
+      observaciones: "",
     });
 
     localStorage.setItem("pacientes", JSON.stringify(patients));
